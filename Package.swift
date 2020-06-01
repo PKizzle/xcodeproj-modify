@@ -12,12 +12,12 @@ let package = Package(
        )
     ],
     dependencies: [
-        .package(url: "https://github.com/tuist/xcodeproj.git", from: "6.2.0"),
+        .package(url: "https://github.com/tuist/xcodeproj.git", .upToNextMajor(from: "7.10.0")),
     ],
     targets: [
         .target(
             name: "xcodeproj-modify",
-            dependencies: ["xcodeproj"]),
+            dependencies: ["XcodeProj"]),
         .testTarget(
             name: "xcodeproj-modifyTests",
             dependencies: ["xcodeproj-modify"]),
